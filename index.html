@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yubei Li</title>
+  <meta name="author" content="Yubei Li">
+  <meta name="description" content="Yubei Li is an undergraduate researcher in Statistics and Data Science at UCLA, working on LLM agents and multi-agent systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yubei Li">
+  <meta property="og:description" content="Undergraduate Researcher · UCLA · LLM agents and multi-agent systems">
+  <!-- TODO: once the homepage URL is final, add:
+       <link rel="canonical" href="https://YOUR-URL/">
+       <meta property="og:url" content="https://YOUR-URL/"> -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f5fa8'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='600' fill='%23fff' text-anchor='middle'%3EYL%3C/text%3E%3C/svg%3E">
+  <!-- Apply saved display settings before the page paints (no flash of the wrong theme). -->
+  <script>
+    (function () {
+      var d = document.documentElement, p = {};
+      try { p = JSON.parse(localStorage.getItem("display-prefs")) || {}; } catch (e) {}
+      var mq = function (q) { return !!(window.matchMedia && matchMedia(q).matches); };
+      var t = p.theme || "auto";
+      d.setAttribute("data-theme", t === "auto" ? (mq("(prefers-color-scheme: dark)") ? "dark" : "light") : t);
+      d.setAttribute("data-contrast", p.contrast || (mq("(prefers-contrast: more)") ? "high" : "normal"));
+      d.setAttribute("data-cvd", p.cvd ? "on" : "off");
+      d.setAttribute("data-size", p.size || "m");
+    })();
+  </script>
+  <!-- Calligraphy font for the Chinese name. Only the three characters 李芋蓓 are downloaded (text=…).
+       To switch fonts, change "Zhi+Mang+Xing" here AND --font-cn in style.css
+       (options: Ma+Shan+Zheng, Long+Cang, ZCOOL+XiaoWei, Liu+Jian+Mao+Cao). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&text=%E6%9D%8E%E8%8A%8B%E8%93%93&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ============ Top navigation ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <!-- Profile icons (top-left). Remove an <li> to hide one. -->
+      <ul class="nav-icons" aria-label="Profiles">
+        <li>
+          <a href="mailto:freyali27@g.ucla.edu" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v.3l-10 6.4L2 6.8v-.3A1.5 1.5 0 0 1 3.5 5zM2 9.2l10 6.4 10-6.4v8.3a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://scholar.google.com/citations?user=mNZcuUcAAAAJ" title="Google Scholar" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 9.6l11 7.6 11-7.6z"/><circle cx="12" cy="16.3" r="4.6" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Freya-lyb" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/liyubeifreya" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="4.6" cy="4.6" r="2.4"/><path d="M2.6 8.6h4v12.8h-4zM9.4 8.6h3.8v1.8c.6-1.1 2-2.1 4-2.1 4 0 4.7 2.6 4.7 6v7.1h-4v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.4h-4z"/></svg>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="assets/Yubei_Li_CV.pdf" data-cv target="_blank" rel="noopener">CV</a></li>
+        <li>
+          <button type="button" class="settings-btn" aria-expanded="false" aria-controls="display-panel" title="Display settings" hidden>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span class="sr-only">Display settings</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Display settings panel (theme, text size, contrast, color-blind mode) -->
+      <div id="display-panel" class="display-panel" role="dialog" aria-label="Display settings" hidden>
+        <p class="panel-title">Display</p>
+        <fieldset>
+          <legend>Theme</legend>
+          <div class="seg">
+            <label><input type="radio" name="theme" value="auto"><span>Auto</span></label>
+            <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+            <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Text size</legend>
+          <div class="seg">
+            <label><input type="radio" name="size" value="m" aria-label="Default text size"><span>A</span></label>
+            <label><input type="radio" name="size" value="l" aria-label="Large text"><span class="sz-l">A+</span></label>
+            <label><input type="radio" name="size" value="xl" aria-label="Larger text"><span class="sz-xl">A++</span></label>
+          </div>
+        </fieldset>
+        <label class="toggle">
+          <input type="checkbox" name="contrast">
+          <span>High contrast<small>Darker text, stronger borders and underlined links</small></span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" name="cvd">
+          <span>Color-blind friendly<small>Color-blind-safe colors; badges and links don’t rely on color</small></span>
+        </label>
+        <button type="button" class="panel-reset">Reset to default</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+
+    <!-- ============ About ============ -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <div class="about-text">
+        <h1 id="about-heading">Yubei Li <span class="name-cn" lang="zh-CN">李芋蓓</span></h1>
+        <p class="aka">Goes by <strong>Freya</strong></p>
+        <p class="subtitle">Undergraduate Researcher · University of California, Los Angeles</p>
+
+        <p>
+          Hi! I’m <strong>Yubei Li</strong>, an undergraduate student in Statistics and Data Science at
+          <a href="https://www.ucla.edu/">UCLA</a> and an undergraduate researcher working with
+          <a href="https://scholar.google.com/citations?user=7k_1QFIAAAAJ">Prof. Ying Nian Wu</a> and
+          <a href="https://scholar.google.com/citations?user=fqDBtzYAAAAJ">Prof. Kai-Wei Chang</a>.
+        </p>
+        <p>
+          I am interested in <strong>LLM agents</strong> and <strong>multi-agent systems</strong>, particularly how agents
+          can adapt memory, communication, and coordination for efficient and reliable long-horizon reasoning.
+          My current work explores agent memory, adaptive communication, and multi-agent topology design.
+        </p>
+
+        <ul class="links" aria-label="Contact and profiles">
+          <li>
+            <a href="mailto:freyali27@g.ucla.edu">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=mNZcuUcAAAAJ">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 9.5 12 4l10 5.5-10 5.5z"/><path d="M6 11.7V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.3"/></svg>
+              Google Scholar
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Freya-lyb">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="assets/Yubei_Li_CV.pdf" data-cv target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+              CV
+            </a>
+          </li>
+          <li class="link-subtle">
+            <a href="https://www.linkedin.com/in/liyubeifreya">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Profile photo: drop your photo at assets/images/profile.jpg.
+           Until then, the monogram below is shown automatically. -->
+      <figure class="photo">
+        <img src="assets/images/profile.jpg" alt="Portrait of Yubei Li" width="440" height="550" data-photo>
+        <div class="photo-fallback" aria-hidden="true"><span>YL</span></div>
+      </figure>
+    </section>
+
+    <!-- ============ News ============
+         Newest first. Keep it to ~3–5 items; delete old ones as you add new ones. -->
+    <section id="news" aria-labelledby="news-heading">
+      <div class="section-head">
+        <h2 id="news-heading">News</h2>
+      </div>
+      <ul class="dated-list">
+        <li>
+          <span class="dated-when">Oct 2026</span>
+          <span class="dated-what">I’ll be at <strong>COLM 2026</strong> in San Francisco (Oct 6–9), where <em>Agent Q-Mix</em> will be presented. Feel free to say hi!</span>
+        </li>
+        <li>
+          <span class="dated-when">Sep 2026</span>
+          <span class="dated-what"><em>Codebook Agent</em> preprint is now on <a href="https://arxiv.org/abs/2609.02264">arXiv</a>.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ Publications ============
+         To add a paper: copy one <article class="pub"> block and edit it.
+         - Badge classes: "badge badge-venue" (accepted venue) or "badge" (Preprint).
+         - Wrap your own name in <strong class="me">Yubei Li</strong>.
+         - Links go inside <p class="pub-links">; omit that <p> entirely if there are none.
+    -->
+    <section id="publications" aria-labelledby="pub-heading">
+      <div class="section-head">
+        <h2 id="pub-heading">Publications</h2>
+        <a class="section-aside" href="https://scholar.google.com/citations?user=mNZcuUcAAAAJ">Google Scholar ↗</a>
+      </div>
+
+      <h3 class="year">2026</h3>
+
+      <!-- Agent Q-Mix -->
+      <article class="pub">
+        <div class="pub-badge"><span class="badge badge-venue" title="COLM 2026">COLM</span></div>
+        <div class="pub-body">
+          <h4 class="pub-title"><a href="https://arxiv.org/abs/2604.00344">Agent Q-Mix: Selecting the Right Action for LLM Multi-Agent Systems through Reinforcement Learning</a></h4>
+          <p class="pub-authors">Eric Hanchen Jiang, Levina Li, Rui Sun, Xiao Liang, <strong class="me">Yubei Li</strong>, Yuchen Wu, Haozheng Luo, Hengli Li, Zhi Zhang, Zhaolu Kang, Kai-Wei Chang, Ying Nian Wu, et al.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2604.00344">Paper</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Codebook Agent -->
+      <article class="pub">
+        <div class="pub-badge"><span class="badge">Preprint</span></div>
+        <div class="pub-body">
+          <h4 class="pub-title"><a href="https://arxiv.org/abs/2609.02264">Codebook Agent: Amortized Topology Design for LLM Multi-Agent Systems</a></h4>
+          <p class="pub-authors"><strong class="me">Yubei Li</strong>, Jinxi Yu, Eric Hanchen Jiang, Zhi Zhang, Dong Liu, Wenxiao Zhao, Levina Li, Kai-Wei Chang, Ying Nian Wu</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2609.02264">Paper</a>
+            <!-- When the repo is public, uncomment and set the URL:
+            <a href="https://github.com/Freya-lyb/REPO-NAME">Code</a>
+            -->
+          </p>
+        </div>
+      </article>
+
+      <!-- Memory as a Controlled Process (MEMCON) -->
+      <article class="pub">
+        <div class="pub-badge"><span class="badge">Preprint</span></div>
+        <div class="pub-body">
+          <!-- When a public link is final, wrap the title in <a href="URL">…</a>
+               and add <p class="pub-links"><a href="URL">Paper</a></p> below the authors. -->
+          <h4 class="pub-title">Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents</h4>
+          <p class="pub-authors">Eric Hanchen Jiang, Zhi Zhang, Yuchen Wu, Levina Li, Dong Liu, Xiao Liang, Rui Sun, <strong class="me">Yubei Li</strong>, Edward Sun, Haozheng Luo, Zhaolu Kang, Aylin Caliskan, Kai-Wei Chang, Ying Nian Wu</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ Education ============ -->
+    <section id="education" aria-labelledby="edu-heading">
+      <div class="section-head">
+        <h2 id="edu-heading">Education</h2>
+      </div>
+
+      <div class="edu">
+        <div class="edu-head">
+          <h3 class="edu-school">University of California, Los Angeles (UCLA)</h3>
+          <span class="edu-date">Expected June 2027</span>
+        </div>
+        <p class="edu-degree">B.S. in Statistics &amp; Data Science · Minor in Data Science Engineering</p>
+        <p class="edu-meta">GPA: 3.90 / 4.00</p>
+      </div>
+
+      <div class="edu">
+        <div class="edu-head">
+          <h3 class="edu-school">Nanyang Technological University (NTU), Singapore</h3>
+          <span class="edu-date">2019–2022</span>
+        </div>
+        <p class="edu-degree">Associate Degree · Business &amp; Engineering Focus</p>
+        <p class="edu-meta">GPA: 3.80 / 4.00</p>
+      </div>
+    </section>
+
+    <!-- ============ Honors & Awards ============
+         One <li> per award, newest first. -->
+    <section id="awards" aria-labelledby="awards-heading">
+      <div class="section-head">
+        <h2 id="awards-heading">Honors &amp; Awards</h2>
+      </div>
+      <ul class="dated-list">
+        <li>
+          <span class="dated-when">2025–2026</span>
+          <span class="dated-what"><strong>Dean’s Honors List</strong>, University of California, Los Angeles</span>
+        </li>
+        <li>
+          <span class="dated-when">2019–2020<br>2021–2022</span>
+          <span class="dated-what"><strong>Director’s List</strong> (Top 5%), Nanyang Technological University (NTU), Singapore</span>
+        </li>
+      </ul>
+
+      <p class="outside">Outside research, I enjoy guzheng, tennis, skiing, and music production.</p>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Yubei Li · UCLA</p>
+      <p>
+        <a href="mailto:freyali27@g.ucla.edu">Email</a> ·
+        <a href="https://scholar.google.com/citations?user=mNZcuUcAAAAJ">Scholar</a> ·
+        Last updated: October 2026
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
