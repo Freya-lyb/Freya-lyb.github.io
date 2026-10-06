@@ -53,9 +53,18 @@ git push -u origin main
 Once the final URL is known, uncomment the `canonical` / `og:url` lines near the top of
 `index.html` and fill in the URL.
 
-## 3. Replace the profile photo
+## 3. Photos
 
-Save your photo as **`assets/images/profile.jpg`**. No code changes needed.
+The About section shows a small photo carousel. Files live in `assets/images/`:
+
+| File | Shown |
+|---|---|
+| `profile.jpg` | first (main photo) |
+| `photo-2.jpg`, `photo-3.jpg`, `photo-4.jpg` | after it, in this order |
+
+To replace a photo, upload a new file with the same name. To reorder, add or remove photos,
+edit the `<img data-photo …>` lines inside `<figure class="photo">` in `index.html`
+(each line is one photo; give each a short `alt` description). Missing files are skipped automatically.
 
 - Portrait orientation works best (the slot is 4:5, e.g. 880×1100 px).
 - Keep it under ~300 KB for fast loading.
@@ -127,6 +136,18 @@ Find the "Memory as a Controlled Process" block in `index.html` and:
    ```html
    <p class="pub-links"><a href="PAPER_URL">Paper</a></p>
    ```
+
+## Status callout ("applying to Ph.D. programs …")
+
+The highlighted box under the bio is `<div class="callout">` in `index.html`. Edit the text there;
+delete the whole `<div>` to remove it.
+
+## School logos
+
+Education entries show a square logo. Upload square PNGs as
+`assets/images/logos/ucla.png` and `assets/images/logos/ntu.png`
+(about 112×112 px or larger, transparent or white background).
+Until a file exists, a small text badge (UCLA / NTU) is shown instead.
 
 ## News and Honors & Awards
 

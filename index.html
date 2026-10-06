@@ -131,43 +131,43 @@
           My current work explores agent memory, adaptive communication, and multi-agent topology design.
         </p>
 
-        <ul class="links" aria-label="Contact and profiles">
-          <li>
-            <a href="mailto:freyali27@g.ucla.edu">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
-              Email
-            </a>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?user=mNZcuUcAAAAJ">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 9.5 12 4l10 5.5-10 5.5z"/><path d="M6 11.7V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.3"/></svg>
-              Google Scholar
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Freya-lyb">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="assets/Yubei_Li_CV.pdf" data-cv target="_blank" rel="noopener">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
-              CV
-            </a>
-          </li>
-          <li class="link-subtle">
-            <a href="https://www.linkedin.com/in/liyubeifreya">LinkedIn</a>
-          </li>
+        <!-- Status callout. Edit the text here when your plans change. -->
+        <div class="callout" role="note">
+          <svg class="callout-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 1.5 8.5 12 14l8.5-4.45V16h2V8.5z"/><path d="M5.5 12.2v3.6c0 1.6 2.9 3.2 6.5 3.2s6.5-1.6 6.5-3.2v-3.6L12 15.6z"/></svg>
+          <p>
+            <strong>I am applying to Ph.D. programs for Fall 2027</strong> and am also open to research-focused roles in industry.
+            Feel free to reach out at <a href="mailto:freyali27@g.ucla.edu">freyali27@g.ucla.edu</a>.
+          </p>
+        </div>
+
+        <!-- Phones only: the header icons are hidden on small screens, so the same links appear here. -->
+        <ul class="about-icons" aria-label="Profiles">
+          <li><a href="mailto:freyali27@g.ucla.edu">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=mNZcuUcAAAAJ">Google Scholar</a></li>
+          <li><a href="https://github.com/Freya-lyb">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/liyubeifreya">LinkedIn</a></li>
         </ul>
       </div>
 
-      <!-- Profile photo: drop your photo at assets/images/profile.jpg.
-           Until then, the monogram below is shown automatically. -->
-      <figure class="photo">
-        <img src="assets/images/profile.jpg" alt="Portrait of Yubei Li" width="440" height="550" data-photo>
-        <div class="photo-fallback" aria-hidden="true"><span>YL</span></div>
-      </figure>
+      <!-- Photos: assets/images/profile.jpg is shown first; the others follow in order.
+           To add or reorder, copy/move an <img> line. Use 4:5 portrait images (e.g. 880×1100). -->
+      <div class="photo-wrap">
+        <figure class="photo" aria-roledescription="carousel" aria-label="Photos of Yubei Li">
+          <img src="assets/images/profile.jpg" alt="Yubei Li" width="880" height="1100" class="is-active" data-photo>
+          <img src="assets/images/photo-2.jpg" alt="Yubei holding a pine cone in a forest" width="880" height="1100" loading="lazy" data-photo>
+          <img src="assets/images/photo-3.jpg" alt="Yubei carrying a snowboard on a snowy mountain ridge" width="880" height="1100" loading="lazy" data-photo>
+          <img src="assets/images/photo-4.jpg" alt="Yubei kayaking on a lake" width="880" height="1100" loading="lazy" data-photo>
+          <div class="photo-fallback" aria-hidden="true"><span>YL</span></div>
+          <button type="button" class="photo-nav photo-prev" aria-label="Previous photo" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+          </button>
+          <button type="button" class="photo-nav photo-next" aria-label="Next photo" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+          </button>
+        </figure>
+        <div class="photo-dots" hidden></div>
+        <p class="sr-only" aria-live="polite" data-photo-status></p>
+      </div>
     </section>
 
     <!-- ============ News ============
@@ -247,22 +247,34 @@
         <h2 id="edu-heading">Education</h2>
       </div>
 
+      <!-- School logos: put square PNGs at assets/images/logos/ucla.png and ntu.png.
+           Until they exist, a text badge is shown instead. -->
       <div class="edu">
-        <div class="edu-head">
-          <h3 class="edu-school">University of California, Los Angeles (UCLA)</h3>
-          <span class="edu-date">Expected June 2027</span>
+        <div class="edu-logo" data-fallback="UCLA">
+          <img src="assets/images/logos/ucla.png" alt="" width="112" height="112" loading="lazy">
         </div>
-        <p class="edu-degree">B.S. in Statistics &amp; Data Science · Minor in Data Science Engineering</p>
-        <p class="edu-meta">GPA: 3.90 / 4.00</p>
+        <div class="edu-body">
+          <div class="edu-head">
+            <h3 class="edu-school">University of California, Los Angeles (UCLA)</h3>
+            <span class="edu-date">Expected June 2027</span>
+          </div>
+          <p class="edu-degree">B.S. in Statistics &amp; Data Science · Minor in Data Science Engineering</p>
+          <p class="edu-meta">GPA: 3.90 / 4.00</p>
+        </div>
       </div>
 
       <div class="edu">
-        <div class="edu-head">
-          <h3 class="edu-school">Nanyang Technological University (NTU), Singapore</h3>
-          <span class="edu-date">2019–2022</span>
+        <div class="edu-logo" data-fallback="NTU">
+          <img src="assets/images/logos/ntu.png" alt="" width="112" height="112" loading="lazy">
         </div>
-        <p class="edu-degree">Associate Degree · Business &amp; Engineering Focus</p>
-        <p class="edu-meta">GPA: 3.80 / 4.00</p>
+        <div class="edu-body">
+          <div class="edu-head">
+            <h3 class="edu-school">Nanyang Technological University (NTU), Singapore</h3>
+            <span class="edu-date">2019–2022</span>
+          </div>
+          <p class="edu-degree">Associate Degree · Business &amp; Engineering Focus</p>
+          <p class="edu-meta">GPA: 3.80 / 4.00</p>
+        </div>
       </div>
     </section>
 

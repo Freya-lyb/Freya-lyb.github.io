@@ -81,14 +81,83 @@
     apply();
   })();
 
-  // 1) Profile photo: show the "YL" monogram if the image is missing.
-  var img = document.querySelector("[data-photo]");
-  if (img) {
-    var fig = img.closest(".photo");
-    var showFallback = function () { fig.classList.add("no-photo"); };
-    if (img.complete && img.naturalWidth === 0) showFallback();
-    img.addEventListener("error", showFallback);
-  }
+  // 1) Photo carousel. Missing images are dropped; if none load, the "YL" monogram shows.
+  (function photos() {
+    var fig = document.querySelector(".photo");
+    if (!fig) return;
+    var wrap = fig.parentNode;
+    var dotsBox = wrap.querySelector(".photo-dots");
+    var status = wrap.querySelector("[data-photo-status]");
+    var prev = fig.querySelector(".photo-prev");
+    var next = fig.querySelector(".photo-next");
+    var imgs = [];
+    var current = 0;
+
+    var show = function (i, announce) {
+      if (!imgs.length) return;
+      current = (i + imgs.length) % imgs.length;
+      imgs.forEach(function (im, k) { im.classList.toggle("is-active", k === current); });
+      if (dotsBox) {
+        dotsBox.querySelectorAll("button").forEach(function (b, k) {
+          b.setAttribute("aria-current", k === current ? "true" : "false");
+        });
+      }
+      if (announce && status) status.textContent = "Photo " + (current + 1) + " of " + imgs.length;
+    };
+
+    var build = function () {
+      imgs = Array.prototype.filter.call(fig.querySelectorAll("img[data-photo]"), function (im) {
+        return !im.dataset.broken;
+      });
+      if (!imgs.length) { fig.classList.add("no-photo"); return; }
+      fig.classList.remove("no-photo");
+      var multi = imgs.length > 1;
+      if (prev) prev.hidden = !multi;
+      if (next) next.hidden = !multi;
+      if (dotsBox) {
+        dotsBox.hidden = !multi;
+        dotsBox.innerHTML = "";
+        imgs.forEach(function (im, k) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", "Show photo " + (k + 1) + " of " + imgs.length);
+          b.addEventListener("click", function () { show(k, true); });
+          dotsBox.appendChild(b);
+        });
+      }
+      show(Math.min(current, imgs.length - 1), false);
+    };
+
+    fig.querySelectorAll("img[data-photo]").forEach(function (im) {
+      var drop = function () { im.dataset.broken = "1"; im.classList.remove("is-active"); build(); };
+      if (im.complete && im.naturalWidth === 0) drop();
+      im.addEventListener("error", drop);
+      im.removeAttribute("loading"); // the carousel is small; load all so switching is instant
+    });
+
+    if (prev) prev.addEventListener("click", function () { show(current - 1, true); });
+    if (next) next.addEventListener("click", function () { show(current + 1, true); });
+
+    // Swipe on touch screens
+    var x0 = null;
+    fig.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    fig.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40 && imgs.length > 1) show(current + (dx < 0 ? 1 : -1), true);
+      x0 = null;
+    });
+
+    build();
+  })();
+
+  // 1b) School logos: show a text badge if the logo file is missing.
+  document.querySelectorAll(".edu-logo img").forEach(function (im) {
+    var box = im.parentNode;
+    var fail = function () { box.classList.add("no-logo"); };
+    if (im.complete && im.naturalWidth === 0) fail();
+    im.addEventListener("error", fail);
+  });
 
   // 2) CV: if the PDF isn't uploaded yet, grey out the CV links instead of
   //    sending visitors to a 404. (Only checked when served over http/https.)
