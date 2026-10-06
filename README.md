@@ -174,3 +174,4 @@ If Google Fonts can't load, the name falls back to the visitor's Kaiti (楷体) 
 - **Footer "Last updated"**: bottom of `index.html`.
 - **Colors / fonts**: the `:root` block at the top of `assets/css/style.css`.
 - **Hobbies line**: the `<p class="outside">` at the end of the Education section — delete it to remove.
+  
